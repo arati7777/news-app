@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NewsHub</title><link rel="stylesheet" href="style.css">
+</head><body>
+<header>
+  <h1>📰 NewsHub</h1>
+  <input id="q" placeholder="Search news…">
+  <select id="cat"><option value="">All</option></select>
+  <span id="bar"></span>
+</header>
+<main id="feed"></main>
+<p id="end" hidden>You're all caught up ✅</p>
+<div id="sentinel"></div>
+
+<dialog id="authD"><form method="dialog">
+  <h3>Login / Register</h3>
+  <input id="u" placeholder="Username" autocomplete="username">
+  <input id="p" type="password" placeholder="Password" autocomplete="current-password">
+  <p id="authErr" class="err"></p>
+  <div><button type="button" id="loginB">Login</button><button type="button" id="regB">Register</button><button>Close</button></div>
+</form></dialog>
+
+<dialog id="addD"><form method="dialog">
+  <h3>New article</h3>
+  <input id="aT" placeholder="Title">
+  <input id="aC" placeholder="Category (e.g. Sports)">
+  <input id="aI" placeholder="Image URL (optional)">
+  <textarea id="aS" placeholder="Short summary"></textarea>
+  <textarea id="aB" placeholder="Full content" rows="6"></textarea>
+  <div><button type="button" id="addB">Publish</button><button>Cancel</button></div>
+</form></dialog>
+
+<dialog id="comD"><form method="dialog">
+  <h3>Feedback</h3><div id="comList"></div>
+  <div id="comForm"><textarea id="comT" placeholder="Write your feedback…"></textarea>
+  <button type="button" id="comB">Post</button></div>
+  <button>Close</button>
+</form></dialog>
+<script src="app.js"></script>
+</body></html>
